@@ -18,7 +18,7 @@ LIBS   = $(PCSC_LDLIBS) -lm
 LDFLAGS =
 
 OBJS  = arib_std_b25.o b_cas_card.o multi2.o ts_section_parser.o
-HEADERS = arib_std_b25.h b_cas_card.h portable.h
+HEADERS = arib_std_b25.h arib_std_b25_error_code.h b_cas_card.h
 TARGET_APP = b25
 TARGET_LIB = libarib25.so
 TARGETS = $(TARGET_APP) $(TARGET_LIB)
