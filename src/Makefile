@@ -4,7 +4,7 @@ MINOR = 2
 REVISION = 5
 VER = $(MAJOR).$(MINOR).$(REVISION)
 
-DEST_HEADER = $(PREFIX)/include/arib25
+DEST_HEADER = $(PREFIX)/include/aribb25
 
 # PC/SC Lite libraries and headers.
 PCSC_CFLAGS ?= `pkg-config libpcsclite --cflags`
@@ -18,9 +18,9 @@ LIBS   = $(PCSC_LDLIBS) -lm
 LDFLAGS =
 
 OBJS  = arib_std_b25.o b_cas_card.o multi2.o ts_section_parser.o
-HEADERS = arib_std_b25.h arib_std_b25_error_code.h b_cas_card.h
+HEADERS = arib_std_b25.h arib_std_b25_error_code.h b_cas_card.h portable.h
 TARGET_APP = b25
-TARGET_LIB = libarib25.so
+TARGET_LIB = libaribb25.so
 TARGETS = $(TARGET_APP) $(TARGET_LIB)
 DEPEND = Makefile.dep
 SONAME = $(TARGET_LIB).$(MAJOR)
